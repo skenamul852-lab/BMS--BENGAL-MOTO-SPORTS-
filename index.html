@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101322">
-<title>BMS | Bengal Moto Sports</title>
-<style>
-:root{--navy:#101322;--panel:#1b2035;--orange:#ff6b35;--yellow:#ffd166;--white:#f8f9ff;--muted:#b9c0d4;--cyan:#35d0dc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#0c1020;color:var(--white);font-family:Arial,Helvetica,sans-serif}
-header{position:sticky;top:0;z-index:5;background:#101322ed;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff20}
-.nav{max-width:1150px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:1px}.logo{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),var(--yellow));color:#111;font-weight:1000;border:3px solid white}
-nav a{color:white;text-decoration:none;margin-left:20px;font-size:14px;font-weight:bold}nav a:hover{color:var(--yellow)}
-.hero{min-height:590px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#090d1cf2 0%,#0c1020d9 42%,#0c10204a 100%),url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1900&q=85') center/cover}
-.hero-inner{max-width:1150px;width:100%;margin:auto;padding:75px 20px}.eyebrow{color:var(--yellow);font-weight:900;letter-spacing:4px}.hero h1{font-size:clamp(42px,7vw,82px);line-height:.98;margin:15px 0}.hero h1 span{color:var(--orange)}.hero p{max-width:560px;color:#e1e5f2;font-size:18px;line-height:1.7}
-.btn{display:inline-block;padding:15px 23px;border-radius:9px;background:linear-gradient(100deg,var(--orange),#ff9f1c);color:#111;text-decoration:none;font-weight:900;border:0;cursor:pointer}.btn.alt{background:transparent;border:1px solid #ffffff70;color:white;margin-left:8px}
-.wrap{max-width:1150px;margin:auto;padding:65px 20px}.section-title{text-align:center;margin-bottom:30px}.section-title small{color:var(--cyan);letter-spacing:3px;font-weight:bold}.section-title h2{font-size:36px;margin:9px 0}.section-title p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid #ffffff18;border-radius:16px;overflow:hidden}.card img{width:100%;height:190px;object-fit:cover}.card div{padding:20px}.card h3{margin:0 0 9px;color:var(--yellow)}.card p{color:var(--muted);line-height:1.6;margin:0}
-.join{background:linear-gradient(135deg,#171d34,#25213c);border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff18}.formbox{max-width:850px;margin:auto;background:#0e1428;padding:28px;border-radius:18px;border:1px solid #ffffff25;box-shadow:0 20px 60px #0005}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field label{display:block;font-size:13px;color:var(--muted);margin:0 0 7px}.field input,.field select,.field textarea{width:100%;padding:13px;border-radius:8px;border:1px solid #39415d;background:#171e34;color:white;font:inherit}.field textarea{min-height:85px;resize:vertical}.full{grid-column:1/-1}.checkline{display:flex;gap:9px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.5;margin:17px 0}.note{color:#aab3cb;font-size:12px;line-height:1.5;margin-top:14px}.success{display:none;margin-top:16px;padding:13px;background:#123d34;color:#a8ffe4;border-radius:8px}
-.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px}.gallery img{width:100%;height:210px;object-fit:cover;border-radius:13px}.gallery img:first-child{height:432px;grid-row:span 2}
-footer{background:#080b15;padding:30px 20px;text-align:center;color:#aeb6ca}footer strong{color:var(--yellow)}
-@media(max-width:760px){nav{display:none}.hero{min-height:550px}.cards{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:210px;grid-row:auto}.section-title h2{font-size:29px}.btn.alt{margin:10px 0 0}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101318">
+  <meta name="description" content="Bengal Moto Sports — Ride together. Grow together.">
+  <title>Bengal Moto Sports | Ride Together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><div class="nav"><div class="brand"><div class="logo">BMS</div><div>BENGAL MOTO SPORTS<br><small style="color:#aeb6ca;font-size:10px;letter-spacing:2px">RIDE • EXPLORE • CONNECT</small></div></div><nav><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#rides">RIDES</a><a href="#join">JOIN BMS</a></nav></div></header>
-<section class="hero" id="home"><div class="hero-inner"><div class="eyebrow">WELCOME TO THE RIDING COMMUNITY</div><h1>RIDE TOGETHER.<br><span>LIVE THE ROAD.</span></h1><p>Bengal Moto Sports (BMS) brings passionate riders together for memorable journeys, responsible riding and lifelong friendships.</p><a class="btn" href="#join">APPLY FOR MEMBERSHIP</a><a class="btn alt" href="#about">EXPLORE BMS</a></div></section>
-<section class="wrap" id="about"><div class="section-title"><small>WHO WE ARE</small><h2>MORE THAN A RIDING GROUP</h2><p>One community. Many roads. A shared passion for motorcycles.</p></div><div class="cards">
-<article class="card"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=80" alt="Motorcycle on the road"><div><h3>Group Rides</h3><p>Explore new roads and destinations together with fellow riders.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80" alt="Motorcycle touring"><div><h3>Adventure & Touring</h3><p>Make every ride memorable while respecting local rules and nature.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1558980394-0c6b7b1b3e9a?auto=format&fit=crop&w=900&q=80" alt="Rider and motorcycle"><div><h3>Rider Community</h3><p>Meet people who share your love for motorcycles and travel.</p></div></article>
-</div></section>
-<section class="join" id="join"><div class="wrap"><div class="section-title"><small>YOUR NEXT JOURNEY STARTS HERE</small><h2>BECOME A BMS MEMBER</h2><p>Fill in the application. The BMS team can review your details and contact you.</p></div>
-<div class="formbox"><form id="memberForm"><div class="formgrid">
-<div class="field"><label>Full Name *</label><input name="name" required placeholder="Enter your full name"></div>
-<div class="field"><label>Mobile Number *</label><input name="phone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></div>
-<div class="field"><label>Address *</label><input name="address" required placeholder="Village / Town, District"></div>
-<div class="field"><label>Bike / Vehicle Name *</label><input name="vehicle" required placeholder="Example: Dominar 250"></div>
-<div class="field"><label>Driving Licence *</label><select name="licence" required><option value="">Select</option><option>Yes</option><option>No</option><option>Applied</option></select></div>
-<div class="field"><label>Riding Experience *</label><select name="experience" required><option value="">Select experience</option><option>Below 1 year</option><option>1–2 years</option><option>3–5 years</option><option>More than 5 years</option></select></div>
-<div class="field full"><label>Why do you want to join BMS? (Optional)</label><textarea name="message" placeholder="Tell us a little about yourself"></textarea></div>
-</div><label class="checkline"><input type="checkbox" required> I confirm that the information provided is correct and agree to follow safe riding practices and BMS group rules.</label><button class="btn" type="submit">SUBMIT MEMBERSHIP APPLICATION</button><div class="success" id="success">Your application has been prepared. Please send it to the BMS team using the WhatsApp button below.</div><p class="note">Demo form: this starter website does not yet store applications or verify mobile OTP. Connect a form database and OTP service before publishing it as a live membership system.</p></form><a id="whatsapp" class="btn alt" style="display:none;margin-top:12px" target="_blank" rel="noopener">SEND APPLICATION ON WHATSAPP</a></div></div></section>
-<section class="wrap" id="rides"><div class="section-title"><small>THE BMS EXPERIENCE</small><h2>THE ROAD IS CALLING</h2><p>Ride responsibly. Respect every rider. Leave only tyre tracks.</p></div><div class="gallery"><img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1000&q=85" alt="Motorcycle touring"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&q=85" alt="Mountain road"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85" alt="Mountain landscape"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=85" alt="Forest road"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=85" alt="Travel landscape"></div></section>
-<footer><strong>BMS — BENGAL MOTO SPORTS</strong><br>Ride Together • Explore More • Stay Safe<br><small>Membership applications are subject to BMS team approval.</small></footer>
-<script>
-document.getElementById('memberForm').addEventListener('submit',function(e){
- e.preventDefault();const d=new FormData(this);const lines=['BMS MEMBERSHIP APPLICATION','Name: '+d.get('name'),'Mobile: '+d.get('phone'),'Address: '+d.get('address'),'Vehicle: '+d.get('vehicle'),'Driving Licence: '+d.get('licence'),'Riding Experience: '+d.get('experience'),'Message: '+(d.get('message')||'Not provided')];
- const url='https://wa.me/?text='+encodeURIComponent(lines.join('\n'));
- const a=document.getElementById('whatsapp');a.href=url;a.style.display='inline-block';document.getElementById('success').style.display='block';a.scrollIntoView({behavior:'smooth',block:'center'});
-});
-</script>
-</body></html>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Bengal Moto Sports home">
+      <img class="brand-logo" src="bms-logo.png" alt="Bengal Moto Sports official logo">
+      <span class="brand-name">BENGAL <b>MOTO SPORTS</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+      <a href="#about" data-en="About" data-bn="আমাদের সম্পর্কে">About</a>
+      <a href="#membership" data-en="Membership" data-bn="সদস্যপদ">Membership</a>
+      <a href="#contact" data-en="Contact" data-bn="যোগাযোগ">Contact</a>
+      <button class="language-switch" id="languageSwitch" type="button">বাংলা</button>
+      <a class="nav-login" href="#login" data-en="Rider Login" data-bn="রাইডার লগইন">Rider Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow" data-en="THE RIDING COMMUNITY OF BENGAL" data-bn="বাংলার রাইডিং কমিউনিটি">THE RIDING COMMUNITY OF BENGAL</p>
+        <h1 data-en="RIDE TOGETHER.<br><span>GO BEYOND.</span>" data-bn="একসাথে পথ চলি।<br><span>সীমানা পেরিয়ে যাই।</span>">RIDE TOGETHER.<br><span>GO BEYOND.</span></h1>
+        <p class="hero-copy" data-en="More than a ride. A community built on passion, respect and the freedom of the open road." data-bn="শুধু রাইড নয়। ভালোবাসা, সম্মান এবং মুক্ত রাস্তার স্বাধীনতায় গড়ে ওঠা এক পরিবার।">More than a ride. A community built on passion, respect and the freedom of the open road.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#membership" data-en="Become a Member" data-bn="সদস্য হন">Become a Member</a>
+          <a class="button button-ghost" href="#about" data-en="Discover BMS" data-bn="BMS সম্পর্কে জানুন">Discover BMS</a>
+        </div>
+      </div>
+      <div class="hero-tag"><span class="pulse"></span><span data-en="EST. FOR RIDERS" data-bn="রাইডারদের জন্য">EST. FOR RIDERS</span></div>
+      <div class="hero-bottom"><span>01 / 04</span><span class="hero-line"></span><span data-en="BENGAL • INDIA" data-bn="বাংলা • ভারত">BENGAL • INDIA</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="about">
+      <div>
+        <p class="eyebrow dark-eyebrow" data-en="WHO WE ARE" data-bn="আমরা কারা">WHO WE ARE</p>
+        <h2 data-en="ONE COMMUNITY.<br><span>ENDLESS ROADS.</span>" data-bn="একটি পরিবার।<br><span>অগণিত পথ।</span>">ONE COMMUNITY.<br><span>ENDLESS ROADS.</span></h2>
+      </div>
+      <div class="intro-copy">
+        <p data-en="Bengal Moto Sports brings riders together to share experiences, build friendships and make every journey meaningful. We believe in responsible riding, mutual respect and the spirit of community." data-bn="Bengal Moto Sports রাইডারদের একত্রিত করে অভিজ্ঞতা ভাগ করে নিতে, বন্ধুত্ব গড়তে এবং প্রতিটি যাত্রাকে অর্থবহ করে তুলতে। আমরা দায়িত্বশীল রাইডিং, পারস্পরিক সম্মান ও কমিউনিটির চেতনায় বিশ্বাসী।">Bengal Moto Sports brings riders together to share experiences, build friendships and make every journey meaningful. We believe in responsible riding, mutual respect and the spirit of community.</p>
+        <a class="text-link" href="#membership" data-en="JOIN THE COMMUNITY ↗" data-bn="কমিউনিটিতে যোগ দিন ↗">JOIN THE COMMUNITY ↗</a>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="value-card"><span class="value-number">01</span><h3 data-en="RIDE SAFE" data-bn="নিরাপদে রাইড">RIDE SAFE</h3><p data-en="Safety first. Every rider, every ride." data-bn="সবার আগে নিরাপত্তা। প্রতিটি রাইডে।">Safety first. Every rider, every ride.</p></div>
+      <div class="value-card"><span class="value-number">02</span><h3 data-en="RIDE UNITED" data-bn="একসাথে পথ চলি">RIDE UNITED</h3><p data-en="Stronger friendships. Shared journeys." data-bn="দৃঢ় বন্ধুত্ব, একসাথে পথচলা।">Stronger friendships. Shared journeys.</p></div>
+      <div class="value-card"><span class="value-number">03</span><h3 data-en="RIDE RESPONSIBLY" data-bn="দায়িত্ব নিয়ে রাইড">RIDE RESPONSIBLY</h3><p data-en="Respect the road and everyone on it." data-bn="রাস্তা ও সকল পথচারীকে সম্মান করুন।">Respect the road and everyone on it.</p></div>
+    </section>
+
+    <section class="membership-section" id="membership">
+      <div class="membership-copy">
+        <p class="eyebrow" data-en="YOUR NEXT JOURNEY STARTS HERE" data-bn="আপনার পরবর্তী যাত্রা এখান থেকেই">YOUR NEXT JOURNEY STARTS HERE</p>
+        <h2 data-en="BECOME A<br><span>BMS RIDER.</span>" data-bn="হয়ে উঠুন<br><span>BMS রাইডার।</span>">BECOME A<br><span>BMS RIDER.</span></h2>
+        <p data-en="Meet fellow riders, discover new roads and be part of a growing riding family." data-bn="অন্যান্য রাইডারদের সাথে পরিচিত হন, নতুন পথ আবিষ্কার করুন এবং একটি বড় রাইডিং পরিবারের অংশ হয়ে উঠুন।">Meet fellow riders, discover new roads and be part of a growing riding family.</p>
+        <a class="button button-primary" href="#application" data-en="Apply for Membership" data-bn="সদস্যপদের আবেদন করুন">Apply for Membership</a>
+      </div>
+      <div class="membership-art"><div class="art-circle"></div><div class="art-caption">BMS<br><span>RIDE • RESPECT • REPEAT</span></div></div>
+    </section>
+
+    <section class="application section-wrap" id="application">
+      <div class="section-heading">
+        <p class="eyebrow dark-eyebrow" data-en="TAKE THE FIRST STEP" data-bn="প্রথম পদক্ষেপ নিন">TAKE THE FIRST STEP</p>
+        <h2 data-en="RIDER MEMBERSHIP<br><span>APPLICATION</span>" data-bn="রাইডার সদস্যপদ<br><span>আবেদন</span>">RIDER MEMBERSHIP<br><span>APPLICATION</span></h2>
+        <p data-en="Start your application. Our team will share the next steps." data-bn="আপনার আবেদন শুরু করুন। পরবর্তী ধাপ আমাদের টিম জানিয়ে দেবে।">Start your application. Our team will share the next steps.</p>
+      </div>
+      <form id="membershipForm" class="application-form">
+        <label><span data-en="Full name" data-bn="পুরো নাম">Full name</span><input name="name" required autocomplete="name" placeholder="Your full name"></label>
+        <label><span data-en="Mobile number" data-bn="মোবাইল নম্বর">Mobile number</span><input name="phone" required inputmode="tel" pattern="[0-9+() -]{8,18}" placeholder="+91 XXXXX XXXXX"></label>
+        <label><span data-en="City / District" data-bn="শহর / জেলা">City / District</span><input name="city" required placeholder="Your location"></label>
+        <label><span data-en="Motorcycle model" data-bn="মোটরসাইকেলের মডেল">Motorcycle model</span><input name="bike" placeholder="e.g. Your motorcycle model"></label>
+        <label class="full-field"><span data-en="Why would you like to join BMS? (optional)" data-bn="কেন BMS-এ যোগ দিতে চান? (ঐচ্ছিক)">Why would you like to join BMS? (optional)</span><textarea name="message" rows="4" placeholder="Tell us a little about yourself"></textarea></label>
+        <label class="consent full-field"><input type="checkbox" required><span data-en="I confirm that the information above is accurate." data-bn="আমি নিশ্চিত করছি যে উপরের তথ্য সঠিক।">I confirm that the information above is accurate.</span></label>
+        <button class="button button-primary submit-button" type="submit" data-en="Submit Application" data-bn="আবেদন জমা দিন">Submit Application</button>
+        <p class="form-note" id="formNote" role="status">Demo form only — submissions are not sent or stored yet.</p>
+      </form>
+    </section>
+
+    <section class="login-strip" id="login">
+      <div><p class="eyebrow" data-en="ALREADY PART OF THE FAMILY?" data-bn="আপনি কি ইতিমধ্যেই আমাদের পরিবারের সদস্য?">ALREADY PART OF THE FAMILY?</p><h2 data-en="WELCOME BACK, RIDER." data-bn="আবার স্বাগতম, রাইডার।">WELCOME BACK, RIDER.</h2></div>
+      <a class="button button-light" href="mailto:hello@bengalmotosports.example?subject=Rider%20Login%20Enquiry" data-en="Rider Login — Coming Soon" data-bn="রাইডার লগইন — শীঘ্রই আসছে">Rider Login — Coming Soon</a>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="brand footer-brand" href="#home"><img class="brand-logo" src="bms-logo.png" alt="Bengal Moto Sports official logo"><span class="brand-name">BENGAL <b>MOTO SPORTS</b></span></a>
+    <p data-en="Built on passion. United by the ride." data-bn="ভালোবাসায় গড়া। রাইডে একতাবদ্ধ।">Built on passion. United by the ride.</p>
+    <span>© <span id="year"></span> BENGAL MOTO SPORTS</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
